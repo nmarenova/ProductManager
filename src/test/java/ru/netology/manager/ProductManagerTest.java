@@ -20,14 +20,16 @@ class ProductManagerTest {
     }
 
     @Test
-    void shouldSearchByName() {
+    void shouldSearch() {
         ProductManager manager = new ProductManager();
         Book coreJava = new Book(1, "Core Java", 10, "Cay Horstmann", 1000, 2020);
+        Book coreJava2 = new Book(3, "Core Java II", 20, "Cay Horstmann", 1700, 2021);
         Book testJava = new Book(2, "Test Java", 15, "Spock", 500, 2021);
         manager.add(coreJava);
         manager.add(testJava);
-        Product[] expected = new Product[] {coreJava};
-        Product[] actual = manager.searchBy("Core Java");
+        manager.add(coreJava2);
+        Product[] expected = new Product[]{coreJava, coreJava2};
+        Product[] actual = manager.searchBy("Cay Horstmann");
         assertArrayEquals(expected, actual);
     }
 
