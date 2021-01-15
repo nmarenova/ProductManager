@@ -1,4 +1,4 @@
-package netology.domain;
+package ru.netology.domain;
 
 import org.junit.jupiter.api.Test;
 

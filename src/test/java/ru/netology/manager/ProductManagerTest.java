@@ -1,9 +1,8 @@
-package netology.manager;
+package ru.netology.manager;
 
-import netology.domain.Book;
-import netology.domain.Product;
-import netology.domain.Smartphone;
-import netology.repository.ProductRepository;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -41,5 +40,6 @@ class ProductManagerTest {
         Smartphone iPhone = new Smartphone(1, "iPhone", 1000, "Apple");
         assertTrue(manager.matches(iPhone, "iPhone"));
         assertTrue(manager.matches(iPhone, "Apple"));
+        assertFalse(manager.matches(iPhone, "Samsung"));
     }
 }

@@ -1,4 +1,4 @@
-package netology.domain;
+package ru.netology.domain;
 
 import org.junit.jupiter.api.Test;
 
@@ -23,6 +23,4 @@ class SmartphoneTest {
         assertNotEquals(smartphone1, new Smartphone(2, "M", 200, "Z"));
         assertNotEquals(smartphone1, new Product(3, "P", 300));
     }
-
-
 }

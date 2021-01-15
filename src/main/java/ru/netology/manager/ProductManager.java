@@ -1,6 +1,9 @@
-package netology.manager;
-import netology.domain.*;
-import netology.repository.ProductRepository;
+package ru.netology.manager;
+
+import ru.netology.repository.ProductRepository;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 
 public class ProductManager {
     private ProductRepository productRepository = new ProductRepository();
